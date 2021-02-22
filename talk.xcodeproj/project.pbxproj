@@ -10,13 +10,13 @@
 		097ED149A0ED039929289F76 /* Pods_talk_talkUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA7B95768E661DB0EEB2BA33 /* Pods_talk_talkUITests.framework */; };
 		23F0117925E3C9C30032EC25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F0117825E3C9C30032EC25 /* AppDelegate.swift */; };
 		23F0117B25E3C9C30032EC25 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F0117A25E3C9C30032EC25 /* SceneDelegate.swift */; };
-		23F0117D25E3C9C30032EC25 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F0117C25E3C9C30032EC25 /* ViewController.swift */; };
 		23F0118025E3C9C30032EC25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23F0117E25E3C9C30032EC25 /* Main.storyboard */; };
 		23F0118225E3C9C50032EC25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23F0118125E3C9C50032EC25 /* Assets.xcassets */; };
 		23F0118525E3C9C50032EC25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23F0118325E3C9C50032EC25 /* LaunchScreen.storyboard */; };
 		23F0119025E3C9C60032EC25 /* talkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F0118F25E3C9C60032EC25 /* talkTests.swift */; };
 		23F0119B25E3C9C60032EC25 /* talkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F0119A25E3C9C60032EC25 /* talkUITests.swift */; };
 		23F011D225E3CC9D0032EC25 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 23F011D125E3CC9D0032EC25 /* GoogleService-Info.plist */; };
+		23F011DD25E3D1280032EC25 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F011DC25E3D1280032EC25 /* LoginViewController.swift */; };
 		6C28C7F1C417017E12C6F860 /* Pods_talk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FFBA754BDD2642E11FC384E /* Pods_talk.framework */; };
 		7D8484762668FBDED8BA78E8 /* Pods_talkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57B78D498816AF748D0405D2 /* Pods_talkTests.framework */; };
 /* End PBXBuildFile section */
@@ -42,7 +42,6 @@
 		23F0117525E3C9C30032EC25 /* talk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = talk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23F0117825E3C9C30032EC25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23F0117A25E3C9C30032EC25 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		23F0117C25E3C9C30032EC25 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		23F0117F25E3C9C30032EC25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		23F0118125E3C9C50032EC25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		23F0118425E3C9C50032EC25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,6 +53,7 @@
 		23F0119A25E3C9C60032EC25 /* talkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = talkUITests.swift; sourceTree = "<group>"; };
 		23F0119C25E3C9C60032EC25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23F011D125E3CC9D0032EC25 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		23F011DC25E3D1280032EC25 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3FFBA754BDD2642E11FC384E /* Pods_talk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_talk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		57B78D498816AF748D0405D2 /* Pods_talkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_talkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E7BBB7A0CC0A2F6E0A421BB /* Pods-talkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-talkTests.release.xcconfig"; path = "Target Support Files/Pods-talkTests/Pods-talkTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -120,7 +120,7 @@
 			children = (
 				23F0117825E3C9C30032EC25 /* AppDelegate.swift */,
 				23F0117A25E3C9C30032EC25 /* SceneDelegate.swift */,
-				23F0117C25E3C9C30032EC25 /* ViewController.swift */,
+				23F011DC25E3D1280032EC25 /* LoginViewController.swift */,
 				23F0117E25E3C9C30032EC25 /* Main.storyboard */,
 				23F0118125E3C9C50032EC25 /* Assets.xcassets */,
 				23F0118325E3C9C50032EC25 /* LaunchScreen.storyboard */,
@@ -410,7 +410,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23F0117D25E3C9C30032EC25 /* ViewController.swift in Sources */,
+				23F011DD25E3D1280032EC25 /* LoginViewController.swift in Sources */,
 				23F0117925E3C9C30032EC25 /* AppDelegate.swift in Sources */,
 				23F0117B25E3C9C30032EC25 /* SceneDelegate.swift in Sources */,
 			);
