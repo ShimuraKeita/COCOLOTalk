@@ -10,11 +10,6 @@ import UIKit
 class LoginViewController: UIViewController {
     
     //MARK: - IBOutlets
-    //Labels
-    @IBOutlet weak var emailLabelOutlet: UILabel!
-    @IBOutlet weak var passwordLabelOutlet: UILabel!
-    @IBOutlet weak var repeatPasswordLabel: UILabel!
-    @IBOutlet weak var signUpLabel: UILabel!
     
     //textField
     @IBOutlet weak var emailTextField: UITextField!
@@ -26,13 +21,10 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var signUpButtonOutlet: UIButton!
     @IBOutlet weak var resendEmailButtonOutlet: UIButton!
     
-    //Views
-    @IBOutlet weak var repeatPasswordLineView: UIView!
-    
     //MARK: View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        loginButtonOutlet.layer.cornerRadius = 5
     }
     
     //MARK: - IBActions
