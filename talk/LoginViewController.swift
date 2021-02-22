@@ -8,22 +8,47 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
+    
+    //MARK: - IBOutlets
+    //Labels
+    @IBOutlet weak var emailLabelOutlet: UILabel!
+    @IBOutlet weak var passwordLabelOutlet: UILabel!
+    @IBOutlet weak var repeatPasswordLabel: UILabel!
+    @IBOutlet weak var signUpLabel: UILabel!
+    
+    //textField
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var repeatPasswordTextField: UITextField!
+    
+    //Button
+    @IBOutlet weak var loginButtonOutlet: UIButton!
+    @IBOutlet weak var signUpButtonOutlet: UIButton!
+    @IBOutlet weak var resendEmailButtonOutlet: UIButton!
+    
+    //Views
+    @IBOutlet weak var repeatPasswordLineView: UIView!
+    
+    //MARK: View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    //MARK: - IBActions
+    @IBAction func loginButtonPressed(_ sender: Any) {
+        
     }
-    */
-
+    
+    @IBAction func forgotPasswordButtonPressed(_ sender: Any) {
+        
+    }
+    
+    @IBAction func resendEmailButtonPressed(_ sender: Any) {
+        
+    }
+    
+    @IBAction func signUpButtonPressed(_ sender: Any) {
+        
+    }
 }

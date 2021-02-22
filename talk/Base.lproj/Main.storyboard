@@ -90,12 +90,18 @@
                                 <state key="normal" title="パスワードをお忘れですか？">
                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="forgotPasswordButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pPO-EE-mdd"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ADL-3p-nrs">
                                 <rect key="frame" x="271" y="374.5" width="123" height="30"/>
                                 <state key="normal" title="確認メール再送信">
                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="resendEmailButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qyv-Zz-67a"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5xW-Jy-d7z">
                                 <rect key="frame" x="107" y="423" width="200" height="50"/>
@@ -107,6 +113,9 @@
                                 <state key="normal" title="ログイン">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2hp-3D-71l"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L5k-ZQ-Wmi">
                                 <rect key="frame" x="94.5" y="819" width="225.5" height="33"/>
@@ -121,6 +130,9 @@
                                         <rect key="frame" x="173.5" y="0.0" width="52" height="33"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" title="こちら"/>
+                                        <connections>
+                                            <action selector="signUpButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pAQ-5t-qZ8"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -144,6 +156,19 @@
                             <constraint firstItem="lNp-p4-8Sa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="vmi-Xr-wGi"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailLabelOutlet" destination="Xs3-m0-Kbe" id="Fwb-ME-KMb"/>
+                        <outlet property="emailTextField" destination="4qb-tz-AYb" id="3Is-zB-OR0"/>
+                        <outlet property="loginButtonOutlet" destination="5xW-Jy-d7z" id="F6p-hG-qCB"/>
+                        <outlet property="passwordLabelOutlet" destination="dT5-y1-WDt" id="Xkt-oX-y0z"/>
+                        <outlet property="passwordTextField" destination="I1k-Tf-00Z" id="S9m-dt-9gJ"/>
+                        <outlet property="repeatPasswordLabel" destination="9lC-bJ-wZ0" id="WIL-gx-BeA"/>
+                        <outlet property="repeatPasswordLineView" destination="yx0-05-9Iu" id="s6O-x9-T8K"/>
+                        <outlet property="repeatPasswordTextField" destination="ISW-zk-Bw7" id="ayf-N8-Ywk"/>
+                        <outlet property="resendEmailButtonOutlet" destination="ADL-3p-nrs" id="zum-WD-zn4"/>
+                        <outlet property="signUpButtonOutlet" destination="BaR-Xa-iz8" id="qXq-N3-b1i"/>
+                        <outlet property="signUpLabel" destination="Rve-aM-Dyy" id="TuQ-1r-Aoh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
