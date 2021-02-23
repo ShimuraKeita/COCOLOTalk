@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ProgressHUD
 
 class LoginViewController: UIViewController {
     
@@ -34,19 +35,43 @@ class LoginViewController: UIViewController {
         
         loginButtonOutlet.layer.cornerRadius = 5
         updateUIFor(login: true)
+        setupBackgroundTap()
+    }
+    
+    private func setupBackgroundTap() {
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(backgroundTap))
+        view.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func backgroundTap() {
+        view.endEditing(false)
     }
     
     //MARK: - IBActions
     @IBAction func loginButtonPressed(_ sender: Any) {
         
+        if isDataInputedFor(type: isLogin ? "login" : "register") {
+            //login or register
+        } else {
+            ProgressHUD.showFailed("全ての項目を入力してください。")
+        }
     }
     
     @IBAction func forgotPasswordButtonPressed(_ sender: Any) {
-        
+        if isDataInputedFor(type: isLogin ? "login" : "register") {
+            //login or register
+        } else {
+            ProgressHUD.showFailed("メールアドレスが入力されていません。")
+        }
     }
     
     @IBAction func resendEmailButtonPressed(_ sender: Any) {
-        
+        if isDataInputedFor(type:"password") {
+            //login or register
+        } else {
+            ProgressHUD.showFailed("メールアドレスが入力されていません。")
+        }
     }
     
     @IBAction func signUpButtonPressed(_ sender: UIButton) {
@@ -59,9 +84,23 @@ class LoginViewController: UIViewController {
         
         loginButtonOutlet.setTitle(login ? "ログイン" : "新規作成", for: .normal)
         signUpLabel.text = login ? "新規アカウント作成は" : "既にアカウントをお持ちの方は"
+        titleLabel.text = login ? "ログイン" : "新規登録"
         
         UIView.animate(withDuration: 0.5) {
             self.repeatPasswordTextField.isHidden = login
+        }
+    }
+    
+    //MARK: - Helpers
+    private func isDataInputedFor(type: String) -> Bool {
+        
+        switch type {
+        case "login":
+            return emailTextField.text != "" && passwordTextField.text != ""
+        case "registration":
+            return emailTextField.text != "" && passwordTextField.text != "" && repeatPasswordTextField.text != ""
+        default:
+            return emailTextField.text != ""
         }
     }
 }
