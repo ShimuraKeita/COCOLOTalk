@@ -60,7 +60,7 @@ class LoginViewController: UIViewController {
     
     @IBAction func forgotPasswordButtonPressed(_ sender: Any) {
         if isDataInputedFor(type: isLogin ? "login" : "register") {
-            //login or register
+            resetPassword()
         } else {
             ProgressHUD.showFailed("メールアドレスが入力されていません。")
         }
@@ -68,7 +68,7 @@ class LoginViewController: UIViewController {
     
     @IBAction func resendEmailButtonPressed(_ sender: Any) {
         if isDataInputedFor(type:"password") {
-            //login or register
+            resendVerificationEmail()
         } else {
             ProgressHUD.showFailed("メールアドレスが入力されていません。")
         }
@@ -112,7 +112,7 @@ class LoginViewController: UIViewController {
                     
                     self.goToApp()
                 } else {
-                    ProgressHUD.show("メールアドレスの確認が取れていません。")
+                    ProgressHUD.showFailed("メールアドレスの確認が取れていません。")
                     self.resendEmailButtonOutlet.isHidden = false
                 }
             } else {
@@ -136,6 +136,29 @@ class LoginViewController: UIViewController {
             }
         } else {
             ProgressHUD.showFailed("パスワードが一致しません。")
+        }
+    }
+    
+    private func resetPassword() {
+        FirebaseUserListener.shared.resetPasswordFor(email: emailTextField.text!) { (error) in
+            
+            if error == nil {
+                ProgressHUD.showSuccess("パスワード変更メールを送信しました。")
+            } else {
+                ProgressHUD.showFailed(error!.localizedDescription)
+            }
+        }
+    }
+    
+    private func resendVerificationEmail() {
+        FirebaseUserListener.shared.resendVerificationEmail(email: emailTextField.text!) { (error) in
+            
+            if error == nil {
+                ProgressHUD.showSuccess("確認メールを送信しました。")
+            } else {
+                ProgressHUD.showFailed(error!.localizedDescription)
+                print(error!.localizedDescription)
+            }
         }
     }
     
