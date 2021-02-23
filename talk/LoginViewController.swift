@@ -52,7 +52,7 @@ class LoginViewController: UIViewController {
     @IBAction func loginButtonPressed(_ sender: Any) {
         
         if isDataInputedFor(type: isLogin ? "login" : "register") {
-            //login or register
+            isLogin ? loginUser() : registerUser()
         } else {
             ProgressHUD.showFailed("全ての項目を入力してください。")
         }
@@ -101,6 +101,28 @@ class LoginViewController: UIViewController {
             return emailTextField.text != "" && passwordTextField.text != "" && repeatPasswordTextField.text != ""
         default:
             return emailTextField.text != ""
+        }
+    }
+    
+    private func loginUser() {
+        
+    }
+    
+    private func registerUser() {
+        
+        if passwordTextField.text == repeatPasswordTextField.text! {
+            
+            FirebaseUserListener.shared.registerUserWith(email: emailTextField.text!, password: passwordTextField.text!) { (error) in
+                
+                if error == nil {
+                    ProgressHUD.showSuccess("確認メールを送信しました。")
+                    self.resendEmailButtonOutlet.isHidden = false
+                } else {
+                    ProgressHUD.showFailed(error!.localizedDescription)
+                }
+            }
+        } else {
+            ProgressHUD.showFailed("パスワードが一致しません。")
         }
     }
 }
