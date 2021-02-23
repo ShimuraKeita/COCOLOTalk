@@ -40,7 +40,19 @@ struct User: Codable, Equatable {
         return nil
     }
     
-    static func == (1hs: User, rhs: User) -> Bool {
-        1hs.id == rhs.id
+    static func == (lhs: User, rhs: User) -> Bool {
+        lhs.id == rhs.id
+    }
+    
+    func saveUserLocally(_ user: User) {
+        
+        let encoder = JSONEncoder()
+        
+        do {
+            let data = try encoder.encode(user)
+            UserDefaults.standard.set(data, forKey: kCURRENTUSER)
+        } catch {
+            print("error saving user locally ", error.localizedDescription)
+        }
     }
 }

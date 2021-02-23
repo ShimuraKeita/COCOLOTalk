@@ -19,6 +19,8 @@
 		23F011DD25E3D1280032EC25 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F011DC25E3D1280032EC25 /* LoginViewController.swift */; };
 		23F011E225E504190032EC25 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F011E125E504190032EC25 /* User.swift */; };
 		23F011EE25E506E80032EC25 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F011ED25E506E80032EC25 /* Constants.swift */; };
+		23F011F325E509410032EC25 /* FCollectionReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F011F225E509410032EC25 /* FCollectionReference.swift */; };
+		23F011F925E509F20032EC25 /* FirebaseUserListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F011F825E509F20032EC25 /* FirebaseUserListener.swift */; };
 		6C28C7F1C417017E12C6F860 /* Pods_talk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FFBA754BDD2642E11FC384E /* Pods_talk.framework */; };
 		7D8484762668FBDED8BA78E8 /* Pods_talkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57B78D498816AF748D0405D2 /* Pods_talkTests.framework */; };
 /* End PBXBuildFile section */
@@ -58,6 +60,8 @@
 		23F011DC25E3D1280032EC25 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		23F011E125E504190032EC25 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		23F011ED25E506E80032EC25 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		23F011F225E509410032EC25 /* FCollectionReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCollectionReference.swift; sourceTree = "<group>"; };
+		23F011F825E509F20032EC25 /* FirebaseUserListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUserListener.swift; sourceTree = "<group>"; };
 		3FFBA754BDD2642E11FC384E /* Pods_talk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_talk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		57B78D498816AF748D0405D2 /* Pods_talkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_talkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E7BBB7A0CC0A2F6E0A421BB /* Pods-talkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-talkTests.release.xcconfig"; path = "Target Support Files/Pods-talkTests/Pods-talkTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -126,6 +130,7 @@
 				23F0117A25E3C9C30032EC25 /* SceneDelegate.swift */,
 				23F011DC25E3D1280032EC25 /* LoginViewController.swift */,
 				23F011ED25E506E80032EC25 /* Constants.swift */,
+				23F011F725E509C50032EC25 /* FirebaseHelpers */,
 				23F011E625E504200032EC25 /* Model */,
 				23F0117E25E3C9C30032EC25 /* Main.storyboard */,
 				23F0118125E3C9C50032EC25 /* Assets.xcassets */,
@@ -160,6 +165,15 @@
 				23F011E125E504190032EC25 /* User.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		23F011F725E509C50032EC25 /* FirebaseHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				23F011F225E509410032EC25 /* FCollectionReference.swift */,
+				23F011F825E509F20032EC25 /* FirebaseUserListener.swift */,
+			);
+			path = FirebaseHelpers;
 			sourceTree = "<group>";
 		};
 		4F8F9F4C5362957E4265D61A /* Pods */ = {
@@ -424,10 +438,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23F011F325E509410032EC25 /* FCollectionReference.swift in Sources */,
 				23F011EE25E506E80032EC25 /* Constants.swift in Sources */,
 				23F011E225E504190032EC25 /* User.swift in Sources */,
 				23F011DD25E3D1280032EC25 /* LoginViewController.swift in Sources */,
 				23F0117925E3C9C30032EC25 /* AppDelegate.swift in Sources */,
+				23F011F925E509F20032EC25 /* FirebaseUserListener.swift in Sources */,
 				23F0117B25E3C9C30032EC25 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
